@@ -20,6 +20,20 @@ public class bit {
         int x=~(1<<i);
         return num & x;
     }
+    public static int updateIthBit(int num, int i, int bitValue){
+        if (bitValue == 0)
+            return clearIthBit(num,i);
+        else
+            return setIthBit(num,i);
+    }
+    public static int clearLastIBit(int num,int i){
+        int x=~(0)<<i;
+        return num & x;
+    }
+    public static int clearRangeOfBit(int num,int i,int j){
+        int x=(~(0)<<j+1) | ((1<<i)-1);
+        return num & x;
+    }
 
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
